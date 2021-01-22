@@ -6,16 +6,16 @@
 	height: 80px;
 	opacity: 1;
 }
-@keyframes spin {
-	0% {
-		transform: rotate(0deg);
-		@include spinner;
+	@keyframes spin {
+		0% {
+			transform: rotate(0deg);
+			@include spinner;
+		}
+		100% {
+			transform: rotate(360deg);
+			@include spinner;
+		}	
 	}
-	100% {
-		transform: rotate(360deg);
-		@include spinner;
-	}
-}
 
 @mixin display-frame {
 	opacity: 0;
@@ -23,14 +23,14 @@
 	margin-top: -3000px;
 }
 
-@keyframes display {
-	0% {
-		@include display-frame;
+	@keyframes display {
+		0% {
+			@include display-frame;
+		}
+		100% {
+			@include display-frame;
+		}
 	}
-	100% {
-		@include display-frame;
-	}
-}
 
 //animation 4 pages html
 @keyframes moveCircle {
