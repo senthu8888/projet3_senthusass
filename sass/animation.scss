@@ -1,0 +1,60 @@
+//animation index.html 
+@mixin spinner {
+	margin: 0 auto;
+	margin-top: 200px;
+	width: 80px;
+	height: 80px;
+	opacity: 1;
+}
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+		@include spinner;
+	}
+	100% {
+		transform: rotate(360deg);
+		@include spinner;
+	}
+}
+
+@mixin display-frame {
+	opacity: 0;
+	height: 0px;
+	margin-top: -3000px;
+}
+
+@keyframes display {
+	0% {
+		@include display-frame;
+	}
+	100% {
+		@include display-frame;
+	}
+}
+
+//animation 4 pages html
+@keyframes moveCircle {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+$anime: (
+	slideDown: 20px,
+	slideDown1: 30px,
+	slideDown2: 40px,
+	slideDown3: 50px,
+);
+
+@each $slide, $size in $anime {
+	@keyframes #{$slide} {
+		from {
+			transform: translateY($size);
+			opacity: 0;
+		}
+		to {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+}
