@@ -7,12 +7,16 @@ body {
 	padding: 0;
 	font-family: 'Roboto', sans-serif;
 }
+
+@mixin dimension($wid: 100%, $hei: 170px) {
+	width: $wid;
+	height: $hei;
+}
 .loading {
 	border: 4px solid $blue;
 	border-top: 4px solid $gray;
 	border-radius: 100%;
-	width: 0px;
-	height: 0px;
+	@include dimension($wid: 0px, $hei: 0px);
 	opacity: 0;
 	animation: spin 1s linear 2;
 }
@@ -35,9 +39,8 @@ body {
 .explore {
 	position: relative;
 	text-align: center;
-	width: 100%;
+	@include dimension($hei: 175px);
 	background-color: $quator;
-	height: 175px;
 	display: inline-block;
 	h1 {
 		font-size: 20px;
@@ -116,13 +119,12 @@ input {
 		font-weight: 700;
 	}
 	@include flexing($bg: $quator);
+	@include dimension($hei: 70px);
 	margin-bottom: 20px;
 	border-radius: 20px;
 	margin-left: 30px;
 	cursor: pointer;
 	align-items: center;
-	width: 100%;
-	height: 70px;
 	font-size: 15px;
 	box-shadow: 2px 1px 5px 2px $seven;
 	transition: .5s;
@@ -137,8 +139,7 @@ input {
 		margin-top: auto;
 		margin-bottom: auto;
 		transform: translate(-8px, 1px);
-		height: 1.2rem;
-		width: 1.2rem;
+		@include dimension($wid: 1.2rem,$hei: 1.2rem);
 		min-height: 1.2rem;
 		min-width: 1.2rem;
 		line-height: 20px;
@@ -180,8 +181,7 @@ input {
 	margin: 10px;
 }
 .cadre_resto1 {
-	width: 100%;
-	height: 170px;
+	@include dimension;
 	border-radius: 20px 20px 0 0;
 	-o-object-fit: cover;
 	object-fit: cover;
@@ -230,24 +230,22 @@ a {
 	font-weight: 600;
 }
 .liker {
+		@include dimension($wid: 24px,$hei: 24px);
 		margin-top: 20px;
 		margin-right: 24px;
-		width: 24px;
-		height: 24px;
         background-size: 100%;
         color: $gray;
         font-size: 25px;
 }
 .aime {
-    font-size: 25px;
+	@include dimension($wid: 25px,$hei: 25px);
+	font-size: 25px;
     position: absolute;
     margin-left: calc(0% - 0.45px);
     margin-top: calc(0% - 0.1px);
     opacity: 0;
     cursor: pointer;
     background-size: 100%;
-    height: 25px;
-    width: 25px;
     &:hover {
 		transition-duration: 1s;
 		opacity: 1;
@@ -343,8 +341,7 @@ footer {
 		box-sizing: border-box;
 	}
 	.cadre_resto1 {
-		width: calc(100% - 0px);
-		height: 170px;
+		@include dimension($wid: calc(100% - 0px));
 	}
 	.repas {
 		margin-right: 0px;
@@ -382,10 +379,9 @@ footer {
 		align-items: center;
 	}
 	.explore {
+		@include dimension($hei: 100%);
 		position: relative;
 		text-align: center;
-		width: 100%;
-		height: 100%;
 		background-color: $quator;
 		display: inline-block;
 	}
@@ -427,8 +423,7 @@ footer {
 			text-align: center;
 			cursor: pointer;
 			transform: translate(-8px, 1px);
-			height: 1.2rem;
-			width: 1.2rem;
+			@include dimension($wid: 1.2rem,$hei: 1.2rem);
 			min-height: 1.2rem;
 			min-width: 1.2rem;
 			line-height: 20px;
