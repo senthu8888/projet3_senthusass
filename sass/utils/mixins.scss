@@ -1,0 +1,37 @@
+@mixin flexing($bg: $colour-white) {
+	display: flex;
+	flex-direction: row;
+    background-color: $bg;
+}
+
+@mixin flex($display:flex, $justify:center, $width:100%) {
+	display: $display;
+	justify-content: $justify;
+	width: $width;
+}
+
+@mixin cover-cadre($max-height: 20rem) {
+	max-width: 100%;
+	width: 100%;
+	object-fit: cover;
+	max-height: $max-height;
+}
+
+@mixin ellipsis($space: nowrap) {
+	white-space: $space;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+@mixin dimension($wid: 100%, $hei: 170px) {
+	width: $wid;
+	height: $hei;
+}
+
+@mixin search($padding-search: 14px) {
+	background-color: $colour-fifth;
+	font-size: 15px;
+	height: 10px;
+	margin-top: 3px;
+	padding: $padding-search;
+}
