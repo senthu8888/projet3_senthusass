@@ -73,6 +73,26 @@
     opacity: 1;
   }
 }
+.filter1 {
+  transition: 0.5s;
+  animation: slideDown 1s;
+}
+
+.filter2 {
+  transition: 0.5s;
+  animation: slideDown1 1s;
+}
+
+.filter3 {
+  transition: 0.5s;
+  animation: slideDown2 1s;
+}
+
+.filter4 {
+  transition: 0.5s;
+  animation: slideDown3 1s;
+}
+
 .logo_restaurant {
   display: flex;
   flex-direction: row;
@@ -285,26 +305,6 @@
   margin-left: 20px;
 }
 
-.filter1 {
-  transition: 0.5s;
-  animation: slideDown 1s;
-}
-
-.filter2 {
-  transition: 0.5s;
-  animation: slideDown1 1s;
-}
-
-.filter3 {
-  transition: 0.5s;
-  animation: slideDown2 1s;
-}
-
-.filter4 {
-  transition: 0.5s;
-  animation: slideDown3 1s;
-}
-
 .compose {
   margin: auto;
 }
@@ -352,7 +352,7 @@ body {
 }
 
 .cadre_header {
-  margin-top: 8px;
+  margin: auto;
 }
 
 .recherche {
