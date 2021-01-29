@@ -156,7 +156,6 @@
 			justify-content: space-between;
 		}
 	}
-
 	#propos {
 		li {
 			margin-left: 20px;
@@ -186,14 +185,12 @@
 		align-items: flex-start;
 		margin-bottom: 25px;
 	}
-
 	.cadre_footer {
 		width: 90px;
 		margin-left: 20px;
 		margin-top: 25px;
 		filter: invert(1);
 	}
-
 	.menu-second {
 		@include ellipsis;
 		font-size: 0.87rem;

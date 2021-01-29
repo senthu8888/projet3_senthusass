@@ -171,19 +171,7 @@
 		margin-left: 20px;
 	}
 }
-$animation: (
-	1:slideDown,
-	2:slideDown1,
-	3:slideDown2,
-	4:slideDown3,
-);
 
-@each $number, $slides in $animation {
-	.filter#{$number} {
-		transition: 0.5s;
-		animation: $slides 1s;
-	}
-}
 .compose {
 	margin: auto;
 	h2 {
