@@ -42,12 +42,6 @@
 		@include dimension($wid: calc(100% - 0px));
 	}
 	.repas {
-		/*margin-right: 0px;
-		margin-bottom: 40px;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-evenly;*/
-
 		margin-right: 0px;
 		margin-bottom: 40px;
 		display: grid;
