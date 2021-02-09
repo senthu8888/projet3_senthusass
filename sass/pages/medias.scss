@@ -42,11 +42,17 @@
 		@include dimension($wid: calc(100% - 0px));
 	}
 	.repas {
-		margin-right: 0px;
+		/*margin-right: 0px;
 		margin-bottom: 40px;
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-evenly;
+		justify-content: space-evenly;*/
+
+		margin-right: 0px;
+		margin-bottom: 40px;
+		display: grid;
+		grid-template-columns: repeat(1,1fr);
+		column-gap: 2rem;
 	}
 	.illustration {
 		width: calc(100% - 10px);

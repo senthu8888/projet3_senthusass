@@ -143,6 +143,8 @@ input {
 #restaurant_food {
 	max-width: 1440px;
 	margin: auto;
+
+	width: -moz-available;
 	h2 {
 		margin-left: 25px;
 		margin-top: 40px;
@@ -157,17 +159,31 @@ input {
 	position: relative;
 	text-decoration: none;
 	color: inherit;
-	display: block;
+	/*display: block;*/
 }
 .foody {
-	border-radius: 20px;
+	/*border-radius: 20px;
+	margin: 10px;*/
+
+	background-color: $colour-white;
+	border-radius: 1rem;
 	margin: 10px;
+	position: relative;
+	text-decoration: none;
+	display: block;
 }
 .cadre_resto1 {
-	@include dimension;
+	/*@include dimension;
 	border-radius: 20px 20px 0 0;
 	-o-object-fit: cover;
+	object-fit: cover;*/
+
+	border: 0px solid transparent;
+	border-radius: 1rem 1rem 0 0;
+	box-shadow: none;
 	object-fit: cover;
+	height: 12rem;
+	width: 100%;
 }
 .repas {
 	display: grid;
@@ -227,10 +243,9 @@ a {
     margin-top: calc(0% - 0.1px);
     opacity: 0;
 	cursor: pointer;
-	transition-duration: 0.5s;
-	transition-timing-function: ease-out;
+	transition-duration: 1.5s;
     &:hover {
-		transition-duration: 0.3s;
+		transition-duration: 0.05s;
 		opacity: 1;
 		cursor: pointer;
 		color: rgba($colour-black,0);
